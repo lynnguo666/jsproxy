@@ -26,7 +26,6 @@ jsproxy_config({
         'node-aliyun-sg.etherdream.com:8443': 1,
       },
     },
-     node_map: {
     'test-01': {
       label: '节点1',
       lines: {
