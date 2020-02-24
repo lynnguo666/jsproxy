@@ -2,7 +2,7 @@ jsproxy_config({
   // 当前配置的版本（记录在日志中，用于排查问题）
   // 每次修改配置，该值需要增加，否则不会生效。
   // 默认每隔 5 分钟自动下载配置，若想立即验证，可通过隐私模式访问。
-  ver: '139',
+  ver: '140',
 
   // 通过 CDN 加速常用网站的静态资源（实验中）
   static_boost: {
@@ -16,34 +16,58 @@ jsproxy_config({
       label: '香港节点(失效)',
       lines: {
         // 主机:权重
-        'node-aliyun-hk-1.etherdream.com': 1,
-        'node-aliyun-hk-2.etherdream.com': 2,
+        'node-aliyun-hk-1.etherdream.com:8443': 1,
+        'node-aliyun-hk-2.etherdream.com:8443': 2,
       }
     },
     'demo-sg': {
       label: '新加坡节点（失效）',
       lines: {
-        'node-aliyun-sg.etherdream.com': 1,
+        'node-aliyun-sg.etherdream.com:8443': 1,
       },
     },
     'test-01': {
       label: '节点1',
       lines: {
-        'jsproxy.7fhvj32a.workers.dev': 1,
+        'jsproxy.7fhvj32a.workers.dev:8443': 1,
       }
     },
-        'test-02': {
+    'test-02': {
       label: '节点2',
       lines: {
-        'damp-bush-9bec.zero-one.workers.dev': 1,
+        'damp-bush-9bec.zero-one.workers.dev:8443': 1,
       }
     },
-            'test-03': {
+    'test-03': {
       label: '节点3',
       lines: {
-        'jsproxy.zero-one.workers.dev': 1,
+        // 主机:权重
+        'sproxy.zero-one.workers.dev:8443': 1,
       }
     },
+    'demo-hk': {
+      label: '香港节点(失效)',
+      lines: {
+        // 主机:权重
+        'node-aliyun-hk-1.etherdream.com:8443': 1,
+        'node-aliyun-hk-2.etherdream.com:8443': 2,
+      }
+    },
+    'bwh-la': {
+      label: '搬瓦工-洛杉矶',
+      lines: [
+        'node-bwh-la.etherdream.com:8443'
+      ]
+    },
+    'cfworker': {
+      label: 'Cloudflare Worker',
+      hidden: true,
+      lines: [
+        // 实验中...
+        // 参考 https://github.com/EtherDream/jsproxy/tree/master/cf-worker
+        'node-cfworker.etherdream.com:8443'
+      ]
+    }
     'mysite': {
       label: '当前站点',
       lines: {
