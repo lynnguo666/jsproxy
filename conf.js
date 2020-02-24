@@ -55,18 +55,18 @@ jsproxy_config({
     },
     'bwh-la': {
       label: '搬瓦工-洛杉矶',
-      lines: [
+      lines: {
         'node-bwh-la.etherdream.com:8443'
-      ]
+      }
     },
     'cfworker': {
       label: 'Cloudflare Worker',
       hidden: true,
-      lines: [
+      lines: {
         // 实验中...
         // 参考 https://github.com/EtherDream/jsproxy/tree/master/cf-worker
         'node-cfworker.etherdream.com:8443'
-      ]
+      }
     }
     'mysite': {
       label: '当前站点',
