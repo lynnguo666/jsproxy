@@ -59,7 +59,7 @@ jsproxy_config({
         // 参考 https://github.com/EtherDream/jsproxy/tree/master/cf-worker
         'node-cfworker.etherdream.com:8443'
       }
-    }
+    },
     'mysite': {
       label: '当前站点',
       lines: {
