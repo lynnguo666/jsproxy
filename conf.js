@@ -24,7 +24,7 @@ jsproxy_config({
       label: '新加坡节点（失效）',
       lines: {
         'node-aliyun-sg.etherdream.com:8443': 1,
-      },
+      }
     },
     'test-01': {
       label: '节点1',
